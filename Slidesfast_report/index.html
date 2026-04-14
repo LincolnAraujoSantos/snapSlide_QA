@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>SnapSlide QA Pro</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="app-container">
+        <div class="main-content">
+            <div class="canvas-wrapper" tabindex="0">
+                <canvas id="main-canvas"></canvas>
+                <div id="placeholder-text">Clique aqui e aperte <b>CTRL + V</b> para colar o print</div>
+            </div>
+
+            <aside class="sidebar">
+                <h3>Report de QA</h3>
+
+                <div class="field">
+                    <label>ID da Apresentação</label>
+                    <input type="text" id="pres-id" value="1OgcvlQEXwNpE3ho--2KryxACNX_FTXiopJVLAKEQQfM" />
+                </div>
+
+                <div class="field">
+                    <label>Tipo de Página</label>
+                    <input type="text" id="page-type" placeholder="Ex: Home, Checkout..." />
+                </div>
+
+                <div class="field">
+                    <label>Categoria do Erro</label>
+                    <select id="error-cat">
+                        <option value="HDR_ISSUE">HDR_ISSUE</option>
+                        <option value="SEO_PROBLEM">SEO_PROBLEM</option>
+                        <option value="GAL_ISSUE">GAL_ISSUE</option>
+                        <option value="TRN_ISSUE">TRN_ISSUE</option>
+                        <option value="FEA_ISSUE">FEA_ISSUE</option>
+                        <option value="BLK_ISSUE">BLK_ISSUE</option>
+                        <option value="AST_ISSUE">AST_ISSUE</option>
+                        <option value="REG_ISSUE">REG_ISSUE</option>
+                        <option value="MISS_ISSUE">MISS_ISSUE</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Descrição do Erro</label>
+                    <textarea id="error-desc" rows="5" placeholder="Descreva o problema..."></textarea>
+                </div>
+
+                <button id="btn-send" class="primary-btn">ENVIAR</button>
+            </aside>
+        </div>
+    </div>
+    <div id="toast"></div>
+    <script src="engine.js"></script>
+</body>
+</html>
